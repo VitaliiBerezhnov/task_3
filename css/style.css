@@ -4,6 +4,7 @@
 }
 body{
     font-family: 'Quicksand', sans-serif;
+    background: #f9f9f9;
 }
 .cards{
     display: flex;
@@ -16,17 +17,18 @@ body{
     flex-direction: column;
     position: relative;
     margin: 15px;
+    background: #ffffff;
+    border-radius: 3px 3px 0px 0px ;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.055);
   
 }
 .title{
-    left: 10px;
-    top: 10px;
-    z-index: 1;
+    margin-top: 10px;
 }
 .img{
     width: 200px;
     height: auto;
-    border-radius: 10px 10px 0px 0px ;
+    border-radius: 3px 3px 0px 0px ;
 }
 .loader{
     border: 16px solid #f3f3f3;
