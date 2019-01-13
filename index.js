@@ -1,10 +1,8 @@
 requirejs(["scripts/showData"], function(showData) {
 
     var cards = document.getElementById('cards');
-    var button = document.getElementById('button');
-    button.addEventListener('click', loadData);
 
-    function loadData(){
+    (function (){
 
         var xhr = new XMLHttpRequest();
     
@@ -18,5 +16,5 @@ requirejs(["scripts/showData"], function(showData) {
         };
         
         xhr.send();     
-    };
+    }());
 });
