@@ -1,0 +1,25 @@
+{
+  "name": "task_3",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000t\u0000a\u0000s\u0000k\u0000_\u00003\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitaliiBerezhnov/task_3.git"
+  },
+  "author": "VB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitaliiBerezhnov/task_3/issues"
+  },
+  "homepage": "https://github.com/VitaliiBerezhnov/task_3#readme",
+  "dependencies": {
+    "node-static": "^0.7.11"
+  }
+}
