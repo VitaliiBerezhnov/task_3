@@ -13,6 +13,8 @@ define(function(require){
                 photo = undefined;
             };
 
+            console.log(data.data.after)
+
             node.appendChild(createCard(title, photo, nameAutor)); 
             
         };

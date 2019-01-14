@@ -12,23 +12,36 @@ body{
 }
 .card{
     width: 200px;
-    height: 300px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     position: relative;
     margin: 15px;
     background: #ffffff;
-    border-radius: 3px 3px 0px 0px ;
+    border-radius: 3px 3px 3px 3px ;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.055);
   
 }
 .title{
-    margin-top: 10px;
+    margin: 10px 10px 10px 10px;
 }
 .img{
-    width: 200px;
+    max-width: 100%;
     height: auto;
     border-radius: 3px 3px 0px 0px ;
+}
+.title::after{
+    margin-top: 10px;
+    background-color: #ccc;
+    bottom: 5px;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    width: auto;
+}
+.card p{
+    margin-left: 10px;
 }
 .loader{
     border: 16px solid #f3f3f3;
@@ -41,4 +54,4 @@ body{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
