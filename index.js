@@ -6,19 +6,19 @@ requirejs(["scripts/showData"], function(showData) {
     var url = 'https://www.reddit.com/r/frontend.json';
     var arr = [];
 
-    btm.addEventListener('click', loadMore)
-
-    function loadMore(){
-        var urlLoad = 'https://www.reddit.com/r/'+  input.value + '.json?'// + 'after=' + arr[0];
+    btm.onclick = function(){
+        if(input.value){
+            var urlLoad = 'https://www.reddit.com/r/'+  input.value + '.json?after=' + arr[0];
+        }else{
+            urlLoad = 'https://www.reddit.com/r/frontend.json?after=' + arr[0];
+        }
+        
         subscribe(urlLoad)
     };
  
-    input.onkeydown = function(e) {
-
-        if (!(e.keyCode === 13)) return
-
+    input.onchange = function() {
         cards.innerHTML = '';
-        subscribe('https://www.reddit.com/r/'+  input.value + '.json');       
+        subscribe('https://www.reddit.com/r/'+  input.value + '.json');              
     };
 
     function subscribe(url) {
