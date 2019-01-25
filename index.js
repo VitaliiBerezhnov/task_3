@@ -4,21 +4,23 @@ requirejs(["scripts/showData"], function(showData) {
     var input = document.getElementById('addInp');
     var btm = document.getElementById('btm');
     var url = 'https://www.reddit.com/r/frontend.json';
-    var arr = [];
+    var forUrl;
 
     btm.onclick = function(){
         if(input.value){
-            var urlLoad = 'https://www.reddit.com/r/'+  input.value + '.json?after=' + arr[0];
+            var urlLoad = 'https://www.reddit.com/r/'+  input.value + '.json?after=' + forUrl;
         }else{
-            urlLoad = 'https://www.reddit.com/r/frontend.json?after=' + arr[0];
+            urlLoad = 'https://www.reddit.com/r/frontend.json?after=' + forUrl;
         }
         
         subscribe(urlLoad)
     };
  
-    input.onchange = function() {
+    input.onchange = function(event) {
+        var result = event.target.value
         cards.innerHTML = '';
-        subscribe('https://www.reddit.com/r/'+  input.value + '.json');              
+        subscribe('https://www.reddit.com/r/'+  result + '.json');
+                      
     };
 
     function subscribe(url) {
@@ -39,8 +41,8 @@ requirejs(["scripts/showData"], function(showData) {
     
             var data = JSON.parse(xhr.responseText);
             showData(data, cards);
-            
-            arr[0] = data.data.after;
+
+            forUrl = data.data.after;
             
         };
       };

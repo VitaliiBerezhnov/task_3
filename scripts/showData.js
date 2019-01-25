@@ -16,6 +16,5 @@ define(function(require){
             node.appendChild(createCard(title, photo, nameAutor)); 
             
         };
-        //this.afterNew = data.data.after;
     };
 });

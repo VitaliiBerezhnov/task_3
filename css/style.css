@@ -27,7 +27,7 @@ body{
 }
 .card{
     width: 200px;
-    height: 320px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -38,6 +38,9 @@ body{
 }
 .title{
     margin: 10px 10px 10px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .img{
     max-width: 100%;

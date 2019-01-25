@@ -14,9 +14,6 @@ define(function(){
         card.className = 'card';
         card.appendChild(title);
         var bookTitle = heading || 'Title';
-        if(bookTitle.length > 50){
-          bookTitle = bookTitle.slice(0, 50) + '...';
-        }
         title.innerHTML = bookTitle;
         title.className = 'title';
 
