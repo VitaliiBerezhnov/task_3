@@ -4,6 +4,22 @@
 }
 body{
     font-family: 'Quicksand', sans-serif;
+    background: #f9f9f9;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.input{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    width: 186px;
+    height: 25px;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding-left: 10px;
+    outline: none;
 }
 .cards{
     display: flex;
@@ -16,17 +32,57 @@ body{
     flex-direction: column;
     position: relative;
     margin: 15px;
-  
+    background: #ffffff;
+    border-radius: 3px 3px 3px 3px ;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.055); 
 }
 .title{
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    z-index: 1;
+    margin: 10px 10px 10px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .img{
-    width: 200px;;
-    height: 250px;
-    border-radius: 10px;
-    opacity: 0.9;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 3px 3px 0px 0px ;
+}
+.title::after{
+    margin-top: 10px;
+    background-color: #ccc;
+    bottom: 5px;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    width: auto;
+}
+.card p{
+    margin-left: 10px;
+}
+.loader{
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #000000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.load{
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background: #000000;
+    color: #ccc;
+    cursor: pointer;
+    outline: none;  
 }
